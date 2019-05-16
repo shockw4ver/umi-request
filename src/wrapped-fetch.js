@@ -31,7 +31,7 @@ export default class WrappedFetch {
         params: this.options.params,
       });
       if (response) {
-        response = response.clone();
+        response = response;
         let instance = Promise.resolve(response);
         // cache也应用response拦截器, 感觉可以不要, 因为只缓存状态200状态的数据?
         responseInterceptors.forEach(handler => {
@@ -83,7 +83,7 @@ export default class WrappedFetch {
       return instance.then(response => {
         // 只缓存状态码为 200
         if (response.status === 200) {
-          const copy = response.clone();
+          const copy = response;
           copy.useCache = true;
           this.cache.set({ url: this.url, params }, copy, ttl);
         }
@@ -105,7 +105,7 @@ export default class WrappedFetch {
       let copy;
       instance
         .then(response => {
-          copy = response.clone();
+          copy = response;
           copy.useCache = useCache;
           if (charset === 'gbk') {
             try {

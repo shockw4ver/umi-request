@@ -1,14 +1,13 @@
 {
-  "name": "umi-request",
+  "name": "enolc-request",
   "version": "1.0.7",
-  "description": "A request tool based on fetch.",
+  "description": "A fork from umi-request",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:umijs/umi-request.git"
+    "url": "https://github.com/shockw4ver/umi-request"
   },
-  "bugs": "https://github.com/umijs/umi-request/issues",
   "scripts": {
     "dev": "umi lib build --w",
     "build": "umi lib build",
@@ -24,8 +23,8 @@
     "precommit": "umi-lint --staged --prettier --fix"
   },
   "author": {
-    "name": "puwei",
-    "email": "junwei.pu@gmail.com"
+    "name": "zhangyongchao",
+    "email": "asambojur@live.cn"
   },
   "license": "MIT",
   "devDependencies": {
